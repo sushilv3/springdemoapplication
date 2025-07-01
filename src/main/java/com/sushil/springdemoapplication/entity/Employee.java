@@ -11,6 +11,16 @@ public class Employee {
     String dept;
     Integer age;
 
+    public Employee() {
+    }
+
+    public Employee(Integer id, String name, String dept, Integer age) {
+        this.id = id;
+        this.name = name;
+        this.dept = dept;
+        this.age = age;
+    }
+
     public Integer getId() {
         return id;
     }

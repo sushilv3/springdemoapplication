@@ -1,5 +1,7 @@
 package com.sushil.springdemoapplication.dto;
 
+import com.sushil.springdemoapplication.entity.Employee;
+
 public class EmployeeDto {
     String name;
     String dept;
@@ -27,5 +29,11 @@ public class EmployeeDto {
 
     public void setAge(Integer age) {
         this.age = age;
+    }
+    public EmployeeDto EmployeeMapper(Employee employee){
+        this.setName(employee.getName());
+        this.setAge(employee.getAge());
+        this.setDept(employee.getDept());
+        return this;
     }
 }

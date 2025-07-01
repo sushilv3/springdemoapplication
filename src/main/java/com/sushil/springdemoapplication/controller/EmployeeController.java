@@ -1,5 +1,7 @@
 package com.sushil.springdemoapplication.controller;
 
+import com.sushil.springdemoapplication.dto.EmployeeDto;
+import com.sushil.springdemoapplication.entity.Employee;
 import com.sushil.springdemoapplication.service.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -14,7 +16,7 @@ public class EmployeeController {
     EmployeeService employeeService;
 
     @GetMapping("/getEmployee/{id}")
-    public ResponseEntity<String> getEmpolyee(@PathVariable Integer id) {
+    public ResponseEntity<EmployeeDto> getEmpolyee(@PathVariable Integer id) {
         return ResponseEntity.ok(employeeService.getEmployee(id));
     }
 }
